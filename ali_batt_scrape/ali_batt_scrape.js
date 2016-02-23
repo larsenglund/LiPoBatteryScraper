@@ -1,4 +1,4 @@
-// http://blog.miguelgrinberg.com/post/easy-web-scraping-with-nodejs
+// Inspired by http://blog.miguelgrinberg.com/post/easy-web-scraping-with-nodejs
 
 //var request = require('request');
 var request = require('sync-request'); 
@@ -41,7 +41,7 @@ for (var mah=10; mah<scrape_to; mah+= 10) {
   mah_data[n].avg_price = avg/3;
   n++;
 }
+
 //console.log(util.inspect(mah_data, {depth:12}));
-//fs.writeFileSync('./data.json', util.inspect(mah_data, {depth:12}) , 'utf-8');
 fs.writeFileSync('./data.json', JSON.stringify(mah_data, null, 2), 'utf-8');
 
