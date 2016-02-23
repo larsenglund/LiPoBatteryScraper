@@ -68,9 +68,7 @@ for (var lipoconf=1; lipoconf<11; lipoconf++) {
       battobj.weight = weight_parts[2].replace(/[^\d.-]/g, '');
       battobj.mah = mah.replace(/[^\d.-]/g, '');
       //console.log("'" + mah + "'");
-      //obj.title = $(items[i]).find('.product').attr('title');
-      //obj.prices[i] = parseFloat(price_parts[1].replace(/\$/g , ""));
-      
+
       obj.batts.push(battobj);
     }
 
@@ -80,18 +78,7 @@ for (var lipoconf=1; lipoconf<11; lipoconf++) {
   
   raw_data.push(obj);
 }
-/*
-var n = 0;
-for (var mah=10; mah<scrape_to; mah+= 10) {
-  var avg = 0;
-  for (var i=1; i<4; i++) { // Take average of 1,2,3 (skipping 0)
-    avg += mah_data[n].prices[i];
-  }
-  mah_data[n].avg_price = avg/3;
-  n++;
-}
-*/
+
 //console.log(util.inspect(mah_data, {depth:12}));
-//fs.writeFileSync('./data.json', util.inspect(mah_data, {depth:12}) , 'utf-8');
 fs.writeFileSync('./data.json', JSON.stringify(raw_data, null, 2), 'utf-8');
 
