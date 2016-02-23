@@ -1,0 +1,19 @@
+{
+  "name": "ali_scrape_batt",
+  "version": "1.0.0",
+  "description": "Scrapes aliexpress for lipo batteries",
+  "main": "ali_batt_scrape.js",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "plotly": "^1.0.6",
+    "request": "^2.69.0",
+    "quiche": "^0.0.10",
+    "sync-request": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "scrape then process"
+  },
+  "author": "Lars Englund",
+  "license": "ISC"
+}
